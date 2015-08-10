@@ -158,8 +158,8 @@ img {
   width: 100%;
   height: 110px;
   padding: 3px 3px 3px 3px;
-  background-color: #E6CFCF;
-  color: hsla(0, 100%, 30%, 0.75);
+  background-color: #F5EBE6;
+  color: #B20838;
   font-family: ProximaNovaBold, Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -197,7 +197,7 @@ img {
     left: 360px;
     width: 100%;
     height: 40px;
-    background-color: hsla(0, 100%, 30%, 0.75);
+    background-color: #B20838;
     z-index: 1000;
 }
 
@@ -223,7 +223,7 @@ ul.navbar  {
     font-size: 16px;
     letter-spacing: 1px;
     text-decoration: none;
-    color: #fff;
+    color: #F5EBE6;
 }
 
 .navbar li a:hover{
@@ -590,6 +590,7 @@ mimicks leaflet's zoom ui */
   border-width: 1px 0 1px 0;
   border-style: solid;
   border-color: hsla(0, 0%, 0%, 0.2);
+  background-color: #F5EBE6;
 }
 
 #toggle_slides a {
