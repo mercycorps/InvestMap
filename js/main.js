@@ -57,11 +57,13 @@ app.map = (function(w,d, $, _){
   var initMap = function() {
     // map paramaters to pass to Leaflet
     var params = {
-      center : [40.694631,-73.925028],
+      //center : [40.694631,-73.925028],
+      center : [31.6167, 65.7167],
       minZoom : 14,
       maxZoom : 19,
       zoom : 15,
-      maxBounds : L.latLngBounds([40.675496,-73.957987],[40.714216,-73.877306]),
+      //maxBounds : L.latLngBounds([40.675496,-73.957987],[40.714216,-73.877306]),
+      maxBounds : L.latLngBounds([31.6167, 65.7167],[31.6167, 65.7167]),
       zoomControl : false,
       infoControl: false,
       attributionControl: true
@@ -80,8 +82,8 @@ app.map = (function(w,d, $, _){
     });
 
     var gentIcon = L.icon({
-      iconUrl: 'https://raw.githubusercontent.com/clhenrick/BushwickCommunityMap/gh-pages/images/gentrification.png',
-      iconRetinaUrl: 'https://raw.githubusercontent.com/clhenrick/BushwickCommunityMap/gh-pages/images/gentrification-2x.png',
+      iconUrl: '/images/gentrification.png',
+      iconRetinaUrl: '/images/gentrification-2x.png',
       iconSize: [30, 30],
       iconAnchor: [15, 15],
       popupAnchor: [0, -15],
