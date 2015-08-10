@@ -4,7 +4,7 @@ var app = app || {};
 // keep our map stuff in a part of the app object as to not pollute the global name space
 app.map = (function(w,d, $, _){
 
-  //  define all local variables for map parts and layers 
+  //  define all local variables for map parts and layers
   //  store in an object called 'el' that can be accessed elsewhere
   var el = {
     map : null,
@@ -28,7 +28,7 @@ app.map = (function(w,d, $, _){
     featureGroup : null,
     template : null,
     geocoder : null,
-    geocoderMarker : null, 
+    geocoderMarker : null,
     legend : null,
     taxLotActions : null,
     story : null
@@ -51,11 +51,8 @@ app.map = (function(w,d, $, _){
   _.templateSettings.variable = "legend";
   el.template = _.template($("script.template").html());
 
-  // use google maps api geocoder
-  el.geocoder = new google.maps.Geocoder();
-
   el.legend = $('#ui-legend');
-                                                                           
+
   // set up the map and map layers!
   var initMap = function() {
     // map paramaters to pass to Leaflet
@@ -64,7 +61,7 @@ app.map = (function(w,d, $, _){
       minZoom : 14,
       maxZoom : 19,
       zoom : 15,
-      maxBounds : L.latLngBounds([40.675496,-73.957987],[40.714216,-73.877306]), 
+      maxBounds : L.latLngBounds([40.675496,-73.957987],[40.714216,-73.877306]),
       zoomControl : false,
       infoControl: false,
       attributionControl: true
@@ -88,7 +85,7 @@ app.map = (function(w,d, $, _){
       iconSize: [30, 30],
       iconAnchor: [15, 15],
       popupAnchor: [0, -15],
-    });    
+    });
 
     // lat lngs for locations of stories
     el.bushwick = new L.LatLng(40.694631,-73.925028);
@@ -101,7 +98,7 @@ app.map = (function(w,d, $, _){
     el.groveStMarker = new L.marker(el.groveSt, {icon: gentIcon}).bindPopup('358 Grove St. Condos');
     el.rheingoldMarker = new L.marker(el.rheingold, {icon: gentIcon}).bindPopup('<a class="rheingold story" href="#" data-slide="1">Rheingold Rezoning</a>');
     el.lindenMarker = new L.marker(el.linden, {icon: gentIcon}).bindPopup('<a class="98linden story" href="#" data-slide="8">98 Linden</a>' );
-    
+
     // array to store sites of gentrification
     el.sitesGent = [
         el.colonyMarker,
@@ -109,24 +106,24 @@ app.map = (function(w,d, $, _){
         el.rheingoldMarker,
         el.lindenMarker
       ];
-    
+
     // instantiate the Leaflet map object
     el.map = new L.map('map', params);
-    
+
     // api key for mapbox tiles
     L.mapbox.accessToken = 'pk.eyJ1IjoiY2hlbnJpY2siLCJhIjoiLVhZMUZZZyJ9.HcNi26J3P-MiOmBKYHIbxw';
 
     // tileLayer for mapbox basemap
     el.mapboxTiles = L.mapbox.tileLayer('chenrick.map-3gzk4pem');
-    el.map.addLayer(el.mapboxTiles); 
+    el.map.addLayer(el.mapboxTiles);
 
     // add mapbox and osm attribution
     var attr = "<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a>"
     el.map.attributionControl.addAttribution(attr);
 
     // feature group to store rheingold geoJSON
-    el.featureGroup = L.featureGroup().addTo(el.map);    
-    
+    el.featureGroup = L.featureGroup().addTo(el.map);
+
     // add Bing satelitte imagery layer
     el.satellite = new L.BingLayer('AkuX5_O7AVBpUN7ujcWGCf4uovayfogcNVYhWKjbz2Foggzu8cYBxk6e7wfQyBQW');
 
@@ -144,7 +141,7 @@ app.map = (function(w,d, $, _){
     // makes sure base layers stay below the cartodb data
     el.map.on('baselayerchange', function(e){
       e.layer.bringToBack();
-    })   
+    })
 
     // load the rheingold GeoJSON layer
     loadRheingold();
@@ -161,15 +158,15 @@ app.map = (function(w,d, $, _){
           }
         });
     });
-  } 
+  }
 
   // function to load map pluto tax lot layer and dob permit layer from CartoDB
-  var getCDBData = function() {  
+  var getCDBData = function() {
     cartodb.createLayer(el.map, el.cdbURL, {
-        cartodb_logo: false, 
+        cartodb_logo: false,
         legends: false,
-        https: true 
-      }, 
+        https: true
+      },
       function(layer) {
         // store the map pluto tax lot sublayer
         layer.getSubLayer(0).setCartoCSS(el.styles.regular);
@@ -191,7 +188,7 @@ app.map = (function(w,d, $, _){
         // create and store the dob permits nb sublayer
         el.dobPermitsNB = layer.createSubLayer({
           sql : "SELECT * FROM exp_codedjobs_nb",
-          cartocss : '#exp_codedjobs_a1 {marker-width: 10; marker-fill: hsl(350,0%,0%); marker-line-color: white; marker-line-width: 0.8;}'         
+          cartocss : '#exp_codedjobs_a1 {marker-width: 10; marker-fill: hsl(350,0%,0%); marker-line-color: white; marker-line-width: 0.8;}'
         });
 
         // positions the tool tip in relationship to user's mouse
@@ -201,15 +198,15 @@ app.map = (function(w,d, $, _){
                  left:  e.pageX + 5,
                  top:   e.pageY + 5
               });
-          };                                
+          };
 
         // hide and set interactivity on the DOB permit layers
         var num_sublayers = layer.getSubLayerCount();
-        for (var i = 1; i < num_sublayers; i++) { 
+        for (var i = 1; i < num_sublayers; i++) {
           // turn on interactivity for mousing events
           layer.getSubLayer(i).setInteraction(true);
           // tell cdb what columns to pass for interactivity
-          layer.getSubLayer(i).setInteractivity('address, jt_description, ownername, ownerphone, ownerbusin, existingst, proposedst');                    
+          layer.getSubLayer(i).setInteractivity('address, jt_description, ownername, ownerphone, ownerbusin, existingst, proposedst');
           // when the user mouses over the dob permit display html & data in a tool tip
           layer.getSubLayer(i).on('featureOver', function(e, pos, latlng, data) {
             $('#tool-tip').html(
@@ -225,11 +222,11 @@ app.map = (function(w,d, $, _){
                                 '<p><strong>Proposed Building Stories:</strong> '  + data.proposedst + '</p>'
                                 );
             $(document).bind('mousemove', event);
-            $('#tool-tip').show();            
+            $('#tool-tip').show();
           });
-          
+
           // when the user mouses out remove the tool tip
-          layer.getSubLayer(i).on('featureOut', function(e,pos,latlng,data){           
+          layer.getSubLayer(i).on('featureOut', function(e,pos,latlng,data){
             $('#tool-tip').hide();
             $(document).unbind('mousemove', event, false);
           });
@@ -241,12 +238,12 @@ app.map = (function(w,d, $, _){
 
       // add the cdb layer to the map
       el.map.addLayer(layer, false);
-      // make sure the base layer stays below the cdb layer      
+      // make sure the base layer stays below the cdb layer
       el.mapboxTiles.bringToBack();
 
       }).on('done', function() {
-        
-      }); // end cartodb.createLayer!      
+
+      }); // end cartodb.createLayer!
   };
 
   // change the cartoCSS of a layer
@@ -303,12 +300,12 @@ app.map = (function(w,d, $, _){
   // add tax lot layer button event listeners
   var initButtons = function() {
     $('.button').click(function(e) {
-      // e.preventDefault(); 
+      // e.preventDefault();
       $('.button').removeClass('selected');
       $(this).addClass('selected');
       el.taxLotActions[$(this).attr('id')]();
       el.taxLots.show();
-    }); 
+    });
   }
 
   // toggle additional layers based on check box boolean value
@@ -324,7 +321,7 @@ app.map = (function(w,d, $, _){
     // toggle A1 major alterations layer
     $a1.change(function(){
       if ($a1.is(':checked')){
-        el.dobPermitsA1.show();      
+        el.dobPermitsA1.show();
       } else {
         el.dobPermitsA1.hide();
       };
@@ -333,16 +330,16 @@ app.map = (function(w,d, $, _){
     // toggle A2, A3 minor alterations layer
     $a2a3.change(function(){
       if ($a2a3.is(':checked')){
-        el.dobPermitsA2A3.show();        
+        el.dobPermitsA2A3.show();
       } else {
         el.dobPermitsA2A3.hide();
       };
-    });    
+    });
 
     // toggle NB new buildings layer
     $nb.change(function(){
       if ($nb.is(':checked')){
-        el.dobPermitsNB.show();        
+        el.dobPermitsNB.show();
       } else {
         el.dobPermitsNB.hide();
       };
@@ -352,23 +349,23 @@ app.map = (function(w,d, $, _){
     $sg.change(function(){
       if ($sg.is(':checked')) {
         for (i=0; i<el.sitesGent.length; i++) {
-          el.featureGroup.addLayer(el.sitesGent[i]);  
+          el.featureGroup.addLayer(el.sitesGent[i]);
         }
         el.featureGroup.addLayer(el.rheingoldPoly);
         el.map.fitBounds(el.featureGroup, {padding: [200, 200]});
 
         // open popups of markers on load
-        el.featureGroup.eachLayer(function(layer) {          
+        el.featureGroup.eachLayer(function(layer) {
           layer.openPopup();
         });
-        
+
       } else {
         for (i=0; i<el.sitesGent.length; i++) {
-          el.featureGroup.removeLayer(el.sitesGent[i]);  
+          el.featureGroup.removeLayer(el.sitesGent[i]);
         }
         el.featureGroup.removeLayer(el.rheingoldPoly);
       };
-    });        
+    });
 
     // toggle personal stories
     // to do: add stories!
@@ -381,58 +378,16 @@ app.map = (function(w,d, $, _){
     });
   }
 
-  // geocode search box text and create a marker on the map
-  var geocode = function(address) {
-    // reference bounding box for Bushwick to improve geocoder results: 40.678685,-73.942451,40.710247,-73.890266
-    var bounds = new google.maps.LatLngBounds(
-          new google.maps.LatLng(40.678685,-73.942451), // sw
-          new google.maps.LatLng(40.710247,-73.890266) // ne
-          );    
-      el.geocoder.geocode({ 'address': address, 'bounds' : bounds }, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-          var latlng = [results[0].geometry.location.lat(), results[0].geometry.location.lng()];
-          console.log('gecoder results: ', results, ' latlng: ', latlng);
-          
-          // remove geocoded marker if one already exists
-          if (el.geocoderMarker) { 
-            el.map.removeLayer(el.geocoderMarker);
-          }
-          // add a marker and pan and zoom the map to it
-          el.geocoderMarker = new L.marker(latlng).addTo(el.map);
-          el.geocoderMarker.bindPopup("<h4>" + results[0].formatted_address + "</h4>" ).openPopup();
-          el.map.setView(latlng, 20);          
-          } else {
-            console.log('geocode unsuccesful: ', status);
-          }
-      });
-  }
-
-  // search box ui interaction TO DO: check to see if point is outside of Bushwick bounds
-  var searchAddress = function() {
-    $('#search-box').focus(function(){
-      if ($(this).val()==="Search for a Bushwick address") {
-        $(this).val("");
-      }
-    });
-    $('#search-box').on('blur',function(){      
-      if ($(this).val()!=="") {
-        $address = $(this).val()
-        geocode($address);  
-        $(this).val("");
-      } 
-    });
-  }
-
   // function to render choropleth legends
   var renderLegend = function(data) {
-    if (data === null) { 
+    if (data === null) {
       el.legend.addClass('hidden');
       return;
     }
     var legendData = {
       title : data.title,
       items : data.items,// array of objects containing color and values
-    };    
+    };
     el.legend.html(el.template(legendData));
     if (el.legend.hasClass('hidden')) el.legend.removeClass('hidden');
   };
@@ -455,7 +410,7 @@ app.map = (function(w,d, $, _){
       items : [
         {
           color : "#BD0026",
-          label : "3.3 - 4"        
+          label : "3.3 - 4"
         },
         {
           color : "#F03B20",
@@ -505,7 +460,7 @@ app.map = (function(w,d, $, _){
       {
         color : "#feebe2",
         label : "1800-1900"
-      },                                    
+      },
       ]
     },
     landuse: {
@@ -550,9 +505,9 @@ app.map = (function(w,d, $, _){
       {
         color: "#CAB2D6",
         label: "N/A"
-      },                                                        
+      },
       ]
-    }    
+    }
   };
 
   // get it all going!
@@ -560,9 +515,8 @@ app.map = (function(w,d, $, _){
     initMap();
     initButtons();
     initCheckboxes();
-    searchAddress();
     initZoomButtons();
-    app.intro.init();    
+    app.intro.init();
   }
 
   // only return init() and the stuff in the el object
@@ -575,5 +529,5 @@ app.map = (function(w,d, $, _){
 
 // call app.map.init() once the DOM is loaded
 window.addEventListener('DOMContentLoaded', function(){
-  app.map.init();  
+  app.map.init();
 });
