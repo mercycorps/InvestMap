@@ -15,3 +15,6 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Use Slim for templating
 gem 'middleman-slim'
+
+# Deployment to GitHub Pages
+gem 'middleman-gh-pages'
