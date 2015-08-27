@@ -6,8 +6,9 @@ html
     meta name="description" content="#{data.site.description}"
     title = current_page.data.title || data.site.title
 
-    = stylesheet_link_tag "app", data.resources.fonts
-    = javascript_include_tag  "app"
+    = stylesheet_link_tag data.resources.stylesheets
 
   body class="#{page_classes}"
     = yield
+
+  = javascript_include_tag  data.resources.scripts
