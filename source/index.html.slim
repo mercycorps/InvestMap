@@ -15,11 +15,12 @@ section.pages
   article.intro
     .column.col-12
       = current_page.data.intro
-  article.what
+  article.subpages
     - pages = sitemap.find_resource_by_path('/pages/index.html').children
-    - pages.each_with_index do |page, index|
-      .column.col-12.subpage-link
-        = page.data.title
+    .column.col-12.subpage-link
+      ul
+        - pages.each_with_index do |page, index|
+          li = link_to page.data.title, page.path
 
 
 section.tour
@@ -32,3 +33,6 @@ section.tour
         h2 = step.data.title
         / #render appears to be the only method for fetching the content of a resource
         = step.render layout: false
+        - related = sitemap.find_resource_by_path("/pages/#{step.data.related}/index.html")
+        - if related
+          = link_to related.data.title, related.path, class: 'button'

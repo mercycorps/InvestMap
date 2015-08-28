@@ -9,3 +9,30 @@ section.pages
 
   article.intro
     font-family: $type-family-mono
+
+  article.subpages
+    padding-top: 0
+    padding-bottom: 0
+
+    ul
+      +reset-list
+
+      li
+        &:last-of-type
+          a
+            border-bottom: none
+
+    a
+      display: block
+      padding: 1rem 2rem
+      margin: 0 -2rem
+      border-bottom: 1px solid $color-shade
+      text-decoration: none
+      background: image-url('arrow.svg')
+      background-size: 16px
+      background-repeat: no-repeat
+      background-position: 90% center
+      background-position: right 2rem center
+
+      &:hover
+        background-color: transparentize($color-shade, 0.8)
