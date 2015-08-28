@@ -14,8 +14,12 @@ body
   margin: 0
   padding: 0
 
+html
+  height: 100%
+
 body
   font-family: $type-family-sans
+  min-height: 100%
 
 
 // Base Elements: Sectioning
@@ -30,6 +34,12 @@ article
 
 // Base Elements: Typographic
 
+p
+  margin: 0
+
+  & + p
+    margin-top: 1em
+
 h1,
 h2,
 h3,
@@ -39,3 +49,15 @@ h6
   font-size: inherit
   font-weight: normal
   margin: 0
+  font-weight: bold
+
+h1
+  font-size: 1.5rem
+  font-family: $type-family-condensed
+
+// Base Elements: Media
+
+img,
+svg,
+video
+  max-width: 100%
