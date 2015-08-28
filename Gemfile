@@ -18,3 +18,6 @@ gem 'middleman-slim'
 
 # Deployment to GitHub Pages
 gem 'middleman-gh-pages'
+
+# Bourbon
+gem 'bourbon'
