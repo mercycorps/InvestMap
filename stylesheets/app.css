@@ -408,6 +408,19 @@ section.tour {
     border-left: 2px solid #b20838;
     font-family: "Roboto Mono", Monaco, monospace;
     color: #646464; }
+  /* line 21, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+  section.tour .related-button {
+    font-size: 85%;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: inline-block;
+    border: 1px solid #b20838;
+    margin-top: 1rem;
+    border-radius: 2px;
+    padding: 0.5em 1.5em;
+    font-family: "Roboto Condensed", Georgia, serif;
+    color: #b20838;
+    text-decoration: none; }
 
 /* line 2, /Users/august/Sites/InvestMap/source/stylesheets/sections/_map.sass */
 section.map .canvas {
@@ -417,18 +430,3 @@ section.map .canvas {
   bottom: 0;
   left: 0;
   left: 33.33333%; }
-
-/* line 1, /Users/august/Sites/InvestMap/source/stylesheets/components/_buttons.sass */
-button,
-.button {
-  border: 1px solid #b20838;
-  border-radius: 2px;
-  padding: 0.5em 1.5em;
-  font-family: "Roboto Condensed", Georgia, serif;
-  font-size: 85%;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  display: inline-block;
-  color: #b20838;
-  text-decoration: none;
-  margin-top: 1rem; }
