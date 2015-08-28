@@ -1,0 +1,33 @@
+// Responsive Helpers
+
+@mixin size ($direction: max, $width: 0)
+  @media screen and ( #{$direction}-width: $width )
+    @content
+
+@mixin desktop
+  +size(min, $layout-breakpoint-tablet)
+    @content
+
+@mixin tablet
+  +size(max, $layout-breakpoint-tablet)
+    @content
+
+@mixin mobile
+  +size(max, $layout-breakpoint-mobile)
+    @content
+
+
+// Positioning
+
+@mixin fill ($position: absolute)
+  position: $position
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+
+// Decoration
+
+@mixin raised
+  box-shadow: 0 3px 5px transparentize($color-black, 0.75)
