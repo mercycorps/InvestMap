@@ -72,3 +72,7 @@ configure :build do
 end
 
 activate :directory_indexes
+
+# Custom Helper Methods
+require "lib/helpers"
+helpers MC
