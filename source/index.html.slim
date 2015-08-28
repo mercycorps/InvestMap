@@ -13,7 +13,8 @@ section.top
   
 section.pages
   article.intro
-    = current_page.data.intro
+    .column.col-12
+      = current_page.data.intro
   article.what
     - pages = sitemap.find_resource_by_path('/pages/index.html').children
     - pages.each_with_index do |page, index|
