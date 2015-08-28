@@ -1,16 +1,20 @@
 ---
 title: Tour
+intro: >
+  Introductory text can be supplied, if you'd like to provide some context for the tour, below.
 ---
 
 = partial 'partials/map', locals: { map_id: 'invest' }
 
 section.top
-  
-section.pages
   article
     .column.col-12.site-title
       h1 = data.site.title
-  article
+  
+section.pages
+  article.intro
+    = current_page.data.intro
+  article.what
     - pages = sitemap.find_resource_by_path('/pages/index.html').children
     - pages.each_with_index do |page, index|
       .column.col-12.subpage-link
