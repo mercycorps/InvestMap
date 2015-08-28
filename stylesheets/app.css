@@ -312,6 +312,10 @@ h1 {
   font-family: "Roboto Condensed", Georgia, serif; }
 
 /* line 61, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+a {
+  color: inherit; }
+
+/* line 66, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
 img,
 svg,
 video {
@@ -337,7 +341,7 @@ main {
   z-index: 50; }
   /* line 9, /Users/august/Sites/InvestMap/source/stylesheets/sections/_main.sass */
   main section article {
-    padding: 2rem 2rem; }
+    padding: 2rem 1.5rem; }
 
 /* line 1, /Users/august/Sites/InvestMap/source/stylesheets/sections/_pages.sass */
 section.pages {
@@ -351,6 +355,38 @@ section.pages {
   /* line 10, /Users/august/Sites/InvestMap/source/stylesheets/sections/_pages.sass */
   section.pages article.intro {
     font-family: "Roboto Mono", Monaco, monospace; }
+  /* line 13, /Users/august/Sites/InvestMap/source/stylesheets/sections/_pages.sass */
+  section.pages article.subpages {
+    padding-top: 0;
+    padding-bottom: 0; }
+    /* line 17, /Users/august/Sites/InvestMap/source/stylesheets/sections/_pages.sass */
+    section.pages article.subpages ul {
+      margin: 0;
+      padding: 0; }
+      /* line 38, /Users/august/Sites/InvestMap/source/stylesheets/_mixins.sass */
+      section.pages article.subpages ul li {
+        margin: 0;
+        padding: 0;
+        display: block;
+        list-style: none; }
+      /* line 22, /Users/august/Sites/InvestMap/source/stylesheets/sections/_pages.sass */
+      section.pages article.subpages ul li:last-of-type a {
+        border-bottom: none; }
+    /* line 25, /Users/august/Sites/InvestMap/source/stylesheets/sections/_pages.sass */
+    section.pages article.subpages a {
+      display: block;
+      padding: 1rem 2rem;
+      margin: 0 -2rem;
+      border-bottom: 1px solid #d2d2d2;
+      text-decoration: none;
+      background: url("/InvestMap/images/arrow.svg");
+      background-size: 16px;
+      background-repeat: no-repeat;
+      background-position: 90% center;
+      background-position: right 2rem center; }
+      /* line 37, /Users/august/Sites/InvestMap/source/stylesheets/sections/_pages.sass */
+      section.pages article.subpages a:hover {
+        background-color: rgba(210, 210, 210, 0.2); }
 
 /* line 1, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
 section.tour {
@@ -381,3 +417,18 @@ section.map .canvas {
   bottom: 0;
   left: 0;
   left: 33.33333%; }
+
+/* line 1, /Users/august/Sites/InvestMap/source/stylesheets/components/_buttons.sass */
+button,
+.button {
+  border: 1px solid #b20838;
+  border-radius: 2px;
+  padding: 0.5em 1.5em;
+  font-family: "Roboto Condensed", Georgia, serif;
+  font-size: 85%;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: inline-block;
+  color: #b20838;
+  text-decoration: none;
+  margin-top: 1rem; }
