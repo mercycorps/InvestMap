@@ -76,3 +76,11 @@ activate :directory_indexes
 # Custom Helper Methods
 require "lib/helpers"
 helpers MC
+
+# Deployment Options
+
+# Deployment Options
+activate :deploy do |deploy|
+  deploy.method = :git
+end
+

@@ -18,6 +18,7 @@ gem 'middleman-slim'
 
 # Deployment to GitHub Pages
 gem 'middleman-gh-pages'
+gem 'middleman-deploy', '~> 1.0'
 
 # Bourbon
 gem 'bourbon'
