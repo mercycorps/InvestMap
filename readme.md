@@ -40,4 +40,4 @@ To publish changes to the `gh-pages` branch, navigate to your repository and run
 $ rake publish
 ```
 
-Verify your changes at the project's [public-facing endpoint](http://mercycorps.github.io/InvestProject/).
+Verify your changes at the project's [public-facing endpoint](http://mercycorps.github.io/InvestMap/).
