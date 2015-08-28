@@ -9,6 +9,12 @@ html
     = stylesheet_link_tag data.resources.stylesheets
 
   body class="#{page_classes}"
-    = yield
+    = partial 'partials/header'
+
+    main
+      = yield
+
+    footer
+
 
   = javascript_include_tag  data.resources.scripts
