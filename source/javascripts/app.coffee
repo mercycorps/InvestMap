@@ -1,2 +1,2 @@
 //= require_tree .
-console.log 'INVEST'
+cartodb.createVis 'invest', $('#invest').data 'map-url'
