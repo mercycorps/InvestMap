@@ -35,4 +35,4 @@ section.tour
         = step.render layout: false
         - related = sitemap.find_resource_by_path("/pages/#{step.data.related}/index.html")
         - if related
-          = link_to related.data.title, related.path, class: 'button'
+          = link_to related.data.title, related.path, class: 'related-button'
