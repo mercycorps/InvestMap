@@ -8,7 +8,7 @@ html
 
     = stylesheet_link_tag data.resources.stylesheets
 
-  body class="#{page_classes}"
+  body class="#{page_classes}" data-baseurl="#{config[:http_prefix]}"
     = partial 'partials/header'
 
     main
