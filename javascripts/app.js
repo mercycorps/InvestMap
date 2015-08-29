@@ -923,6 +923,10 @@ $.support.pjax =
 $.support.pjax ? enable() : disable()
 
 })(jQuery);
+Number.prototype.map = function (in_min, in_max, out_min, out_max) {
+  return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+;
 (function() {
   window.MC || (window.MC = {});
 
@@ -941,10 +945,9 @@ $.support.pjax ? enable() : disable()
   var Sequencer, Step, base, base1;
 
   (base = window.MC.Classes).Sequencer || (base.Sequencer = Sequencer = (function() {
-    function Sequencer(map, offset) {
+    function Sequencer(map) {
       var step;
       this.map = map;
-      this.offset = offset;
       this.layers = [];
       this.steps = (function() {
         var i, len, ref, results;
@@ -1005,11 +1008,15 @@ $.support.pjax ? enable() : disable()
       ref = this.steps;
       for (i = 0, len = ref.length; i < len; i++) {
         step = ref[i];
-        if (step.el.offset().top > ($(window).scrollTop() + this.offset)) {
+        if (step.el.offset().top / $(document.body).height() > this.get_offset()) {
           return step;
         }
       }
-      return this.steps[0];
+      return this.steps[this.steps.length - 1];
+    };
+
+    Sequencer.prototype.get_offset = function() {
+      return $(window).scrollTop() / ($(document.body).height() - $(window).height());
     };
 
     Sequencer.prototype.pan = function(lat, lng) {
@@ -1058,7 +1065,7 @@ $.support.pjax ? enable() : disable()
 (function() {
   MC.Storage.map = cartodb.createVis(MC.Storage.regions.map, MC.Storage.regions.map.data('map-url'));
 
-  MC.Storage.sequencer = new MC.Classes.Sequencer(MC.Storage.map, Math.floor($(window).height() / 4));
+  MC.Storage.sequencer = new MC.Classes.Sequencer(MC.Storage.map);
 
 }).call(this);
 (function() {
