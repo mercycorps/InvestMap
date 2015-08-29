@@ -37,7 +37,7 @@ If you need a package for distribution outside GitHub Pages, a quick `$ middlema
 To publish changes to the `gh-pages` branch, navigate to your repository and run:
 
 ```
-$ rake publish
+$ middleman deploy
 ```
 
-Verify your changes at the project's [public-facing endpoint](http://mercycorps.github.io/InvestMap/).
+Please only deploy from `master`. Verify your changes at the project's [public-facing endpoint](http://mercycorps.github.io/InvestMap/).
