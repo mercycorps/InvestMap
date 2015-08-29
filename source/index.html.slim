@@ -28,7 +28,7 @@ section.tour
   / It doesn't appear that Middleman has a clean way of sorting pages by filename/path, so we have to include the step number in each step's frontmatter, then call it here. One would assume that the default ordering of #children would be the directory or path names, but such is not the case.
   - steps = tour.children.sort { |a, b| a.data.step <=> b.data.step }
   - steps.each_with_index do |step, index|
-    article.step data-step="#{index}" data-layers="" data-lat="#{step.data.lat}" data-lng="#{step.data.lng}"
+    article.step data-step="#{index}" data-layers="" data-lat="#{step.data.lat}" data-lng="#{step.data.lng}" data-zoom="#{step.data.zoom}"
       .column.col-12
         h2 = step.data.title
         / #render appears to be the only method for fetching the content of a resource

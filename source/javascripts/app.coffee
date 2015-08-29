@@ -1,4 +1,5 @@
 #= require "_global.coffee"
+#= require "_tour-sequencer.coffee"
 #= require "_map-init.coffee"
 
 $(window).on 'resize', ->
