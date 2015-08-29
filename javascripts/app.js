@@ -1016,7 +1016,7 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
     };
 
     Sequencer.prototype.get_offset = function() {
-      return $(window).scrollTop() / ($(document.body).height() - $(window).height());
+      return $(window).scrollTop() / ($(document.body).height() + 250 - $(window).height());
     };
 
     Sequencer.prototype.pan = function(lat, lng) {
