@@ -9,6 +9,8 @@ layers:
   - "all_20_20oasis_202007_2014"
   - "invest_knd_dataset_1"
   - "invest_partnership"
+related:
+  'Explore M&E Afghanistan': 'm-e-afghanistan'
 ---
 
 Mercy Corps has partnered with nearly 400 local business with the goal of employing INVEST participants in the fields they study. These partnerships are an integral part of INVEST’s success. By connecting participants with local, skilled businesses, participants continue to gain skills while developing community.
