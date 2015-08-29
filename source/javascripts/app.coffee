@@ -1,4 +1,5 @@
 #= require "lib/jquery.pjax"
+#= require "lib/number-map-polyfill"
 
 #= require "_global.coffee"
 #= require "_tour-sequencer.coffee"
