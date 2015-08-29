@@ -1,5 +1,6 @@
 $(document).pjax '[data-pjax]', '#page-content',
   fragment: '#page-content'
+  scrollTo: false
 .on 'ready pjax:end', (xhr, options) ->
   console.log xhr, options
   if window.location.pathname == $(document.body).data 'baseurl'
