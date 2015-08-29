@@ -4,6 +4,6 @@ stylesheets:
   - "app"
 scripts:
   - "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
-  - "https://maps.googleapis.com/maps/api/js"
+  # - "https://maps.googleapis.com/maps/api/js"
   - "http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"
   - "app"
