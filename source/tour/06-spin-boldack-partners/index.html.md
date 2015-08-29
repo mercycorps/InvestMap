@@ -7,6 +7,8 @@ zoom: 14
 layers:
   - "af_adminborders"
   - "invest_partnership"
+related:
+  'More on Partnerships': 'partnerships'
 ---
 
 INVEST participants are paired with Businesses involved in high demand markets including Education, Sewing/Tailoring, Metal work and Healthcare.
