@@ -73,11 +73,11 @@ end
 
 activate :directory_indexes
 
+page "pages/*", :layout => :page
+
 # Custom Helper Methods
 require "lib/helpers"
 helpers MC
-
-# Deployment Options
 
 # Deployment Options
 activate :deploy do |deploy|

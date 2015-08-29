@@ -5,6 +5,12 @@ article,
   & > .column
     // font-size: $type-size-base
 
+  &.origin-right
+    text-align: right
+
+    & > .column
+      text-align: left
+
 @for $column from 1 through $layout-columns-count
   .col-#{$column}
     width: ( ( ( 100% ) / $layout-columns-count ) * $column )

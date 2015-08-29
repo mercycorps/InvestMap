@@ -7,4 +7,4 @@ section.pages
     .column.col-12.subpage-link
       ul
         - pages.each_with_index do |page, index|
-          li = link_to page.data.title, page.url
+          li = link_to page.data.title, page.url, { class: 'page-link', data: { pjax: true } }

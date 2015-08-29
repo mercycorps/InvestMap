@@ -12,14 +12,22 @@ html
     = partial 'partials/header'
 
     main
-      = partial 'partials/map', locals: { map_id: 'invest' }
       = partial 'partials/intro'
       = partial 'partials/pages'
       = partial 'partials/tour'
 
-    aside#drawer
-      #page-content
-        = yield
+    = partial 'partials/map', locals: { map_id: 'invest' }
+
+    aside#drawer.drawer
+      section
+        article.controls
+          .column.col-12
+            = link_to '/', { class: 'close', data: { pjax: true } } do
+              == "&times;"
+        article
+          .column.col-12
+            #page-content.page-content
+              = yield
 
     footer
 

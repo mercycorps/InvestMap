@@ -2,6 +2,8 @@
 title: INVEST in Kandahar
 ---
 
+# INVEST in Kandahar
+
 This proposed project seeks to address the key needs identified by IDPs by providing vocational training linked to economic opportunities within the locale and in the home provinces, by linking IDPs to relevant organizations providing literacy training and schooling and by delivering life skills modules to aid repatriation to home provinces. In June 2011, UNHCR and the World Bank completed research on IDPs in Kabul, Kandahar and Herat cities interviewing 450 IDP households (150 households per city). UNHCR found that conflict-induced displacement, limited reintegration opportunities for returning refugees, the rapid growth of cities, and the proliferation of informal settlements constitute an enormously complex challenge for the government, municipalities, and humanitarian and development actors in Afghanistan. Relevant highlights from the study include:
 
 - While conflict and insecurity are usually the main push factors to displacement, economic considerations such as food security and better employment opportunities act as the main pull factors to the urban centers.
