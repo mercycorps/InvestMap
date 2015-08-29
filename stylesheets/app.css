@@ -311,11 +311,15 @@ h1 {
   font-size: 1.5rem;
   font-family: "Roboto Condensed", Georgia, serif; }
 
-/* line 61, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+/* line 59, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+h2 {
+  font-family: "Roboto Condensed", Georgia, serif; }
+
+/* line 64, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
 a {
   color: inherit; }
 
-/* line 66, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+/* line 69, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
 img,
 svg,
 video {
@@ -396,19 +400,22 @@ section.tour {
     padding-top: 3rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid #ebebeb; }
-  /* line 9, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+    /* line 9, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+    section.tour article.current {
+      background-color: #ebebeb; }
+  /* line 12, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
   section.tour h2 {
     color: #646464;
     text-transform: uppercase;
     margin-bottom: 1em; }
-  /* line 14, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+  /* line 17, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
   section.tour blockquote {
     margin: 1rem 0;
     padding-left: 1rem;
     border-left: 2px solid #b20838;
     font-family: "Roboto Mono", Monaco, monospace;
     color: #646464; }
-  /* line 21, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+  /* line 24, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
   section.tour .related-button {
     font-size: 85%;
     text-transform: uppercase;
@@ -420,7 +427,12 @@ section.tour {
     padding: 0.5em 1.5em;
     font-family: "Roboto Condensed", Georgia, serif;
     color: #b20838;
-    text-decoration: none; }
+    text-decoration: none;
+    white-space: no-wrap; }
+    /* line 56, /Users/august/Sites/InvestMap/source/stylesheets/_mixins.sass */
+    section.tour .related-button:hover {
+      background-color: #b20838;
+      color: #ebebeb; }
 
 /* line 2, /Users/august/Sites/InvestMap/source/stylesheets/sections/_map.sass */
 section.map .canvas {
