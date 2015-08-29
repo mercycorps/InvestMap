@@ -1070,9 +1070,9 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
 }).call(this);
 (function() {
   $(document).pjax('[data-pjax]', '#page-content', {
-    fragment: '#page-content'
+    fragment: '#page-content',
+    scrollTo: false
   }).on('ready pjax:end', function(xhr, options) {
-    console.log(xhr, options);
     if (window.location.pathname === $(document.body).data('baseurl')) {
       return $('#drawer').hide();
     } else {

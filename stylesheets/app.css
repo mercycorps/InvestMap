@@ -313,21 +313,29 @@ h6 {
   font-weight: normal;
   margin: 0;
   font-weight: bold; }
+  /* line 55, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+  * + h1, * +
+  h2, * +
+  h3, * +
+  h4, * +
+  h5, * +
+  h6 {
+    margin-top: 2em; }
 
-/* line 55, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+/* line 58, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
 h1 {
   font-size: 1.5rem;
   font-family: "Roboto Condensed", Georgia, serif; }
 
-/* line 59, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+/* line 62, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
 h2 {
   font-family: "Roboto Condensed", Georgia, serif; }
 
-/* line 64, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+/* line 67, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
 a {
   color: inherit; }
 
-/* line 69, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+/* line 72, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
 img,
 svg,
 video {
@@ -365,7 +373,7 @@ aside.drawer {
   position: fixed;
   top: 0;
   left: 33.33333%;
-  width: 33.33333%;
+  width: 50%;
   height: 100%;
   overflow: scroll; }
   /* line 13, /Users/august/Sites/InvestMap/source/stylesheets/sections/_drawer.sass */
@@ -373,7 +381,7 @@ aside.drawer {
     position: relative; }
     /* line 15, /Users/august/Sites/InvestMap/source/stylesheets/sections/_drawer.sass */
     aside.drawer section article {
-      padding: 2rem 1.5rem; }
+      padding: 2rem 1.5rem 4rem 1.5rem; }
   /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/sections/_drawer.sass */
   aside.drawer article.controls {
     text-align: right;
@@ -382,11 +390,17 @@ aside.drawer {
     left: 0;
     width: 100%;
     z-index: 100; }
-    /* line 25, /Users/august/Sites/InvestMap/source/stylesheets/sections/_drawer.sass */
+    /* line 26, /Users/august/Sites/InvestMap/source/stylesheets/sections/_drawer.sass */
     aside.drawer article.controls .close {
       font-size: 1.5rem;
-      text-decoration: none; }
-  /* line 29, /Users/august/Sites/InvestMap/source/stylesheets/sections/_drawer.sass */
+      text-decoration: none;
+      -webkit-transition: color, 0.1s, linear;
+      -moz-transition: color, 0.1s, linear;
+      transition: color, 0.1s, linear; }
+      /* line 31, /Users/august/Sites/InvestMap/source/stylesheets/sections/_drawer.sass */
+      aside.drawer article.controls .close:hover {
+        color: #b20838; }
+  /* line 34, /Users/august/Sites/InvestMap/source/stylesheets/sections/_drawer.sass */
   aside.drawer h1,
   aside.drawer h2,
   aside.drawer h3,
@@ -394,6 +408,10 @@ aside.drawer {
   aside.drawer h5,
   aside.drawer h6 {
     margin-bottom: 1em; }
+  /* line 42, /Users/august/Sites/InvestMap/source/stylesheets/sections/_drawer.sass */
+  aside.drawer h2 {
+    color: #b20838;
+    text-transform: uppercase; }
 
 /* line 1, /Users/august/Sites/InvestMap/source/stylesheets/sections/_pages.sass */
 section.pages {
@@ -483,7 +501,7 @@ section.tour {
     -moz-transition: all, 0.05s, linear;
     transition: all, 0.05s, linear;
     margin-top: 1rem; }
-    /* line 56, /Users/august/Sites/InvestMap/source/stylesheets/_mixins.sass */
+    /* line 57, /Users/august/Sites/InvestMap/source/stylesheets/_mixins.sass */
     section.tour .related-button:hover {
       background-color: #b20838;
       color: #ebebeb; }
