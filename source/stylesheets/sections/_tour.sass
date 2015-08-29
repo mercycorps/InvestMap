@@ -5,9 +5,10 @@ section.tour
     padding-top: 3rem
     padding-bottom: 3rem
     border-bottom: 1px solid $color-smoke
+    +transition(background-color, 0.5s, linear)
 
     &.current
-      background-color: $color-smoke
+      background-color: lighten($color-smoke, 5%)
   
   h2
     color: $color-charcoal

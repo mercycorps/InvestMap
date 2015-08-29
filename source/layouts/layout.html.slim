@@ -12,9 +12,16 @@ html
     = partial 'partials/header'
 
     main
-      = yield
+      = partial 'partials/map', locals: { map_id: 'invest' }
+      = partial 'partials/intro'
+      = partial 'partials/pages'
+      = partial 'partials/tour'
+
+    aside#drawer
+      #page-content
+        = yield
 
     footer
 
 
-  = javascript_include_tag  data.resources.scripts
+  = javascript_include_tag data.resources.scripts

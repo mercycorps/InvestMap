@@ -1,0 +1,10 @@
+section.pages
+  article.intro
+    .column.col-12
+      = data.site.description
+  article.subpages
+    - pages = get_page.children
+    .column.col-12.subpage-link
+      ul
+        - pages.each_with_index do |page, index|
+          li = link_to page.data.title, page.url
