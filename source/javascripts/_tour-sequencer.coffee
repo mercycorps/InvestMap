@@ -36,7 +36,7 @@ window.MC.Classes.Sequencer ||= class Sequencer
     @steps[@steps.length - 1]
 
   get_offset: ->
-    $(window).scrollTop() / ( $(document.body).height() - $(window).height() )
+    $(window).scrollTop() / ( $(document.body).height() + 250 - $(window).height() )
 
   pan: (lat, lng) ->
     @map.map.setCenter [lat, lng]
