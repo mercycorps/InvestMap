@@ -1,7 +1,7 @@
 # Sequencer
 
 window.MC.Classes.Sequencer ||= class Sequencer
-  constructor: (@map, @offset) ->
+  constructor: (@map) ->
     @layers = []
     @steps = for step in $('main article.step')
       new MC.Classes.Step $(step), @
@@ -32,8 +32,11 @@ window.MC.Classes.Sequencer ||= class Sequencer
 
   get_visible: ->
     for step in @steps
-      return step if step.el.offset().top > ($(window).scrollTop() + @offset)
-    @steps[0]
+      return step if step.el.offset().top / $(document.body).height() > @get_offset()
+    @steps[@steps.length - 1]
+
+  get_offset: ->
+    $(window).scrollTop() / ( $(document.body).height() - $(window).height() )
 
   pan: (lat, lng) ->
     @map.map.setCenter [lat, lng]
