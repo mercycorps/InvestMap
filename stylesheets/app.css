@@ -518,31 +518,44 @@ section.tour {
   position: relative; }
   /* line 4, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
   section.tour article {
+    position: relative;
     padding-top: 3rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid #ebebeb;
     -webkit-transition: background-color, 0.5s, linear;
     -moz-transition: background-color, 0.5s, linear;
     transition: background-color, 0.5s, linear; }
-    /* line 10, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+    /* line 11, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
     section.tour article.current {
       background-color: #f8f8f8; }
-      /* line 13, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+      /* line 14, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+      section.tour article.current::after {
+        content: "";
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid #f8f8f8;
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        margin-top: -5px; }
+      /* line 26, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
       section.tour article.current h2 {
         color: #b20838; }
-  /* line 16, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+  /* line 29, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
   section.tour h2 {
     color: #646464;
     text-transform: uppercase;
     margin-bottom: 1em; }
-  /* line 21, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+  /* line 34, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
   section.tour blockquote {
     margin: 1rem 0;
     padding-left: 1rem;
     border-left: 2px solid #b20838;
     font-family: "Roboto Mono", Monaco, monospace;
     color: #646464; }
-  /* line 28, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+  /* line 41, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
   section.tour .related-button {
     font-size: 85%;
     text-transform: uppercase;
