@@ -72,12 +72,14 @@ window.MC.Classes.MapLayer ||= class MapLayer
   hide: ->
     if @type == 'torque'
       @layer.stop()
+      @layer.hide()
     else
       @layer.hide()
 
   show: ->
     if @type == 'torque'
       @layer.play()
+      @layer.show()
     else
       @layer.show()
 
