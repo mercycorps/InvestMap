@@ -1,7 +1,4 @@
 section.pages
-  article.intro
-    .column.col-12
-      = data.site.description
   article.subpages
     - pages = get_page.children.sort { |a, b| a.data.sort <=> b.data.sort }
     .column.col-12.subpage-link
