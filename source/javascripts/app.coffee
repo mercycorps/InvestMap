@@ -8,6 +8,7 @@
 
 $(window).on 'resize', ->
   # The two main panels need to clear below the header:
-  $('main, .canvas, aside.drawer').css 'padding-top', $('header').outerHeight()
+  headerHeight = $('header').outerHeight()
+  $('main, .canvas, aside.drawer').css 'padding-top', headerHeight
 
 $(window).trigger 'resize'
