@@ -3,7 +3,7 @@ section.pages
     .column.col-12
       = data.site.description
   article.subpages
-    - pages = get_page.children
+    - pages = get_page.children.sort { |a, b| a.data.sort <=> b.data.sort }
     .column.col-12.subpage-link
       ul
         - pages.each_with_index do |page, index|
