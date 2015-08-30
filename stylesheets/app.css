@@ -379,22 +379,25 @@ main {
   position: relative;
   background-color: white;
   width: 33.33333%;
+  min-width: 400px;
   z-index: 50;
   max-height: 100%;
   box-shadow: 0 3px 5px rgba(50, 50, 50, 0.25); }
   @media screen and (max-width: 1024px) {
     /* line 1, /Users/august/Sites/InvestMap/source/stylesheets/sections/_main.sass */
     main {
-      width: 50%; } }
+      width: 50%;
+      min-width: 300px; } }
   @media screen and (max-width: 800px) {
     /* line 1, /Users/august/Sites/InvestMap/source/stylesheets/sections/_main.sass */
     main {
-      width: auto; } }
-  /* line 16, /Users/august/Sites/InvestMap/source/stylesheets/sections/_main.sass */
+      width: auto;
+      min-width: 0; } }
+  /* line 19, /Users/august/Sites/InvestMap/source/stylesheets/sections/_main.sass */
   main section article {
     padding: 2rem 1.5rem; }
     @media screen and (max-width: 1024px) {
-      /* line 16, /Users/august/Sites/InvestMap/source/stylesheets/sections/_main.sass */
+      /* line 19, /Users/august/Sites/InvestMap/source/stylesheets/sections/_main.sass */
       main section article {
         padding: 1.5rem 1rem; } }
 
@@ -560,8 +563,9 @@ section.tour {
     color: #646464; }
   /* line 43, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
   section.tour iframe {
-    margin-bottom: 1rem; }
-  /* line 46, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+    margin-bottom: 1rem;
+    background-color: #646464; }
+  /* line 47, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
   section.tour .related-button {
     font-size: 85%;
     text-transform: uppercase;
