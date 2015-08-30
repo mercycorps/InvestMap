@@ -1,5 +1,6 @@
 ---
 title: The Afghanistan M&E program
+sort: 7
 ---
 
 # Our Mission

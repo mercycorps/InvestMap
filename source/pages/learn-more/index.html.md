@@ -1,5 +1,6 @@
 ---
 title: INVEST in Kandahar
+sort: 1
 ---
 
 # INVEST in Kandahar

@@ -1,5 +1,6 @@
 ---
 title: How Do the VTCs Work?
+sort: 3
 ---
 
 # How Do the VTCs Work?

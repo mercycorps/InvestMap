@@ -1,5 +1,6 @@
 ---
 title: INVEST's Partnerships
+sort: 6
 ---
 
 # More on INVEST’s Partnerships

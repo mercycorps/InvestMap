@@ -1,5 +1,6 @@
 ---
 title: INVEST’s Market Research
+sort: 5
 ---
 
 # Market Research

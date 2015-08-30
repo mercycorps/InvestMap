@@ -1,5 +1,6 @@
 ---
 title: Target Demographic
+sort: 2
 ---
 
 # Who is INVEST’s Target Demographic?
