@@ -91,6 +91,7 @@ window.MC.Classes.Step ||= class Step
   enter: ->
     @el.addClass 'current'
     @center()
+    @zoom()
 
   exit: ->
     @el.removeClass 'current'
