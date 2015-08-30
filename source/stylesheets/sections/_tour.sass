@@ -2,6 +2,7 @@ section.tour
   position: relative
 
   article
+    position: relative
     padding-top: 3rem
     padding-bottom: 3rem
     border-bottom: 1px solid $color-smoke
@@ -9,6 +10,18 @@ section.tour
 
     &.current
       background-color: lighten($color-smoke, 5%)
+
+      &::after
+        content: ''
+        border-top: 10px solid transparent
+        border-bottom: 10px solid transparent
+        border-left: 10px solid lighten($color-smoke, 5%)
+        width: 0
+        height: 0
+        position: absolute
+        left: 100%
+        top: 50%
+        margin-top: -5px
 
       h2
         color: $color-mercy-red
