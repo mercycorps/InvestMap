@@ -1129,7 +1129,7 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
   $(document).pjax('[data-pjax]', '#page-content', {
     fragment: '#page-content',
     scrollTo: false,
-    timeout: 1500
+    timeout: 2000
   }).on('ready pjax:end', function(xhr, options) {
     if (window.location.pathname === $(document.body).data('baseurl')) {
       return $('#drawer').hide();
