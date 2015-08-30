@@ -522,13 +522,15 @@ section.tour {
     padding-top: 3rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid #ebebeb;
-    -webkit-transition: background-color, 0.5s, linear;
-    -moz-transition: background-color, 0.5s, linear;
-    transition: background-color, 0.5s, linear; }
-    /* line 11, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+    -webkit-transition: all, 0.5s, linear;
+    -moz-transition: all, 0.5s, linear;
+    transition: all, 0.5s, linear;
+    opacity: 0.75; }
+    /* line 12, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
     section.tour article.current {
-      background-color: #f8f8f8; }
-      /* line 14, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+      background-color: #f8f8f8;
+      opacity: 1; }
+      /* line 16, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
       section.tour article.current::after {
         content: "";
         border-top: 10px solid transparent;
@@ -540,22 +542,26 @@ section.tour {
         left: 100%;
         top: 50%;
         margin-top: -5px; }
-      /* line 26, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+      /* line 28, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
       section.tour article.current h2 {
         color: #b20838; }
-  /* line 29, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+      /* line 31, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+      section.tour article.current .related-button {
+        color: #b20838;
+        border-color: #b20838; }
+  /* line 35, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
   section.tour h2 {
     color: #646464;
     text-transform: uppercase;
     margin-bottom: 1em; }
-  /* line 34, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+  /* line 40, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
   section.tour blockquote {
     margin: 1rem 0;
     padding-left: 1rem;
     border-left: 2px solid #b20838;
     font-family: "Roboto Mono", Monaco, monospace;
     color: #646464; }
-  /* line 41, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+  /* line 47, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
   section.tour .related-button {
     font-size: 85%;
     text-transform: uppercase;
@@ -571,7 +577,9 @@ section.tour {
     -webkit-transition: all, 0.05s, linear;
     -moz-transition: all, 0.05s, linear;
     transition: all, 0.05s, linear;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    color: #646464;
+    border-color: #646464; }
     /* line 57, /Users/august/Sites/InvestMap/source/stylesheets/_mixins.sass */
     section.tour .related-button:hover {
       background-color: #b20838;

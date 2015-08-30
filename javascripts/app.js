@@ -1065,7 +1065,8 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
 
     MapLayer.prototype.hide = function() {
       if (this.type === 'torque') {
-        return this.layer.stop();
+        this.layer.stop();
+        return this.layer.hide();
       } else {
         return this.layer.hide();
       }
@@ -1073,7 +1074,8 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
 
     MapLayer.prototype.show = function() {
       if (this.type === 'torque') {
-        return this.layer.play();
+        this.layer.play();
+        return this.layer.show();
       } else {
         return this.layer.show();
       }
