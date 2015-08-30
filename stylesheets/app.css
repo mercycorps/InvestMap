@@ -527,19 +527,22 @@ section.tour {
     /* line 10, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
     section.tour article.current {
       background-color: #f8f8f8; }
-  /* line 13, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+      /* line 13, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+      section.tour article.current h2 {
+        color: #b20838; }
+  /* line 16, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
   section.tour h2 {
     color: #646464;
     text-transform: uppercase;
     margin-bottom: 1em; }
-  /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+  /* line 21, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
   section.tour blockquote {
     margin: 1rem 0;
     padding-left: 1rem;
     border-left: 2px solid #b20838;
     font-family: "Roboto Mono", Monaco, monospace;
     color: #646464; }
-  /* line 25, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
+  /* line 28, /Users/august/Sites/InvestMap/source/stylesheets/sections/_tour.sass */
   section.tour .related-button {
     font-size: 85%;
     text-transform: uppercase;
