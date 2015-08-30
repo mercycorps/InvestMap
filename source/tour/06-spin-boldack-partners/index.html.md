@@ -1,8 +1,8 @@
 ---
 title: Business/Partner Location Spin Boldack
 step: 6
-lat: 31.6106
-lng: -294.3011
+lat: 31.0064 
+lng: -293.6054
 zoom: 14
 layers:
   - "af_adminborders"
