@@ -1,7 +1,7 @@
 # Sequencer
 
 window.MC.Classes.Sequencer ||= class Sequencer
-  constructor: (@map) ->
+  constructor: (@map, @key) ->
     @layers = []
     @steps = for step in $('main article.step')
       new MC.Classes.Step $(step), @
@@ -9,13 +9,17 @@ window.MC.Classes.Sequencer ||= class Sequencer
     @map.done (vis, layers) => @setup vis, layers
 
   setup: (vis, layers) ->
-    for layer in layers
-      @layers.push layer
-      # for sublayer in [0..layer.getSubLayerCount()]
-        # @sub_layers.push layer.getSubLayer sublayer
+    for i in [1..(layers.length - 1)]
+      layer = layers[i]
+      # Skip the first layer, because that's the actual map!
+      if layer.type? && layer.type == 'layergroup'
+        for sublayer in [0..(layer.getSubLayerCount() - 1)]
+          @layers.push new MC.Classes.MapLayer layer.getSubLayer sublayer
+      else
+        @layers.push new MC.Classes.MapLayer layer
 
-      @listen()
-      @poll()
+    @listen()
+    @poll()
 
   listen: ->
     $(window).scroll (e) =>
@@ -29,6 +33,7 @@ window.MC.Classes.Sequencer ||= class Sequencer
     @current?.exit()
     @current = step
     @current.enter()
+    @show @current.data.layers
 
   get_visible: ->
     for step in @steps
@@ -44,22 +49,51 @@ window.MC.Classes.Sequencer ||= class Sequencer
   zoom: (level) ->
     @map.map.setZoom level
 
+  find_layer: (key) ->
+    @layers[@key[key]]
+
+  show: (ids) ->
+    console.log 'showing', ids
+    
+    # Hide all layers
+    layer.hide() for layer in @layers
+
+    # Show just those that are in the map name key
+    for id in ids
+      @find_layer(id).show()
+
+# Map Layers (Wrapper for CartDBLayer API)
+
+window.MC.Classes.MapLayer ||= class MapLayer
+  constructor: (@layer) ->
+    @type = if @layer.type? then @layer.type else 'unknown'
+    # @data = @layer.getAttributes()
+
+  hide: ->
+    if @type == 'torque'
+      @layer.stop()
+    else
+      @layer.hide()
+
+  show: ->
+    if @type == 'torque'
+      @layer.play()
+    else
+      @layer.show()
 
 # Individual Steps
 
 window.MC.Classes.Step ||= class Step
   constructor: (@el, @sequencer) ->
     @data = @el.data()
-    # console.log @
+    @data.layers = @data.layers.split ','
 
   enter: ->
     @el.addClass 'current'
     @center()
-    console.log @
 
   exit: ->
     @el.removeClass 'current'
-    console.log @
 
   center: ->
     @sequencer.pan @data.lat, @data.lng

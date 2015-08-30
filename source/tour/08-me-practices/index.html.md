@@ -6,7 +6,7 @@ lng: -294.5984
 zoom: 6
 layers:
   - "af_adminborders"
-  - "all_20_20oasis_202007_2014"
+  - "all_20_20oasis202007_2014"
   - "invest_knd_dataset_1"
   - "invest_partnership"
 related:
