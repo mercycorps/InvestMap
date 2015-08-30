@@ -1,5 +1,14 @@
 aside.map
   z-index: 0
+  position: relative
+
+  +mobile
+    padding-bottom: 50%
+
   .canvas
     +fill(fixed)
     left: (100% / 3)
+
+    +mobile
+      position: absolute
+      left: 0

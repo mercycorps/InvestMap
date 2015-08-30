@@ -11,12 +11,12 @@ html
   body class="#{page_classes}" data-baseurl="#{config[:http_prefix]}"
     = partial 'partials/header'
 
+    = partial 'partials/map', locals: { map_id: 'invest' }
+
     main
       = partial 'partials/intro'
       = partial 'partials/pages'
       = partial 'partials/tour'
-
-    = partial 'partials/map', locals: { map_id: 'invest' }
 
     aside#drawer.drawer
       section
