@@ -1083,7 +1083,9 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
 }).call(this);
 (function() {
   $(window).on('resize', function() {
-    return $('main, .canvas, aside.drawer').css('padding-top', $('header').outerHeight());
+    var headerHeight;
+    headerHeight = $('header').outerHeight();
+    return $('main, .canvas, aside.drawer').css('padding-top', headerHeight);
   });
 
   $(window).trigger('resize');

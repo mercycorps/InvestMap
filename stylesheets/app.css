@@ -268,8 +268,13 @@ article,
 *::before,
 *::after {
   box-sizing: border-box; }
+  /* line 8, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+  *:focus,
+  *::before:focus,
+  *::after:focus {
+    outline: none; }
 
-/* line 10, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+/* line 13, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
 html,
 body {
   font-size: 16px;
@@ -277,17 +282,17 @@ body {
   margin: 0;
   padding: 0; }
 
-/* line 17, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+/* line 20, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
 html {
   height: 100%; }
 
-/* line 20, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+/* line 23, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
 body {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   min-height: 100%;
   color: #323232; }
 
-/* line 28, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+/* line 31, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
 header,
 main,
 footer,
@@ -295,14 +300,14 @@ section,
 article {
   display: block; }
 
-/* line 38, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+/* line 41, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
 p {
   margin: 0; }
-  /* line 41, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+  /* line 44, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
   p + p {
     margin-top: 1em; }
 
-/* line 44, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+/* line 47, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
 h1,
 h2,
 h3,
@@ -313,7 +318,7 @@ h6 {
   font-weight: normal;
   margin: 0;
   font-weight: bold; }
-  /* line 55, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+  /* line 58, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
   * + h1, * +
   h2, * +
   h3, * +
@@ -322,20 +327,29 @@ h6 {
   h6 {
     margin-top: 2em; }
 
-/* line 58, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+/* line 61, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
 h1 {
   font-size: 1.5rem;
   font-family: "Roboto Condensed", Georgia, serif; }
 
-/* line 62, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+/* line 65, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
 h2 {
   font-family: "Roboto Condensed", Georgia, serif; }
 
-/* line 67, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+/* line 68, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+code,
+pre {
+  font-family: "Roboto Mono", Monaco, monospace;
+  background: #f8f8f8;
+  border: 1px solid #ebebeb;
+  padding: 0 0.2em;
+  border-radius: 2px; }
+
+/* line 78, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
 a {
   color: inherit; }
 
-/* line 72, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
+/* line 83, /Users/august/Sites/InvestMap/source/stylesheets/_base.sass */
 img,
 svg,
 video {
