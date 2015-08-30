@@ -6,10 +6,12 @@ section.tour
     padding-top: 3rem
     padding-bottom: 3rem
     border-bottom: 1px solid $color-smoke
-    +transition(background-color, 0.5s, linear)
+    +transition(all, 0.5s, linear)
+    opacity: 0.75
 
     &.current
       background-color: lighten($color-smoke, 5%)
+      opacity: 1
 
       &::after
         content: ''
@@ -25,6 +27,10 @@ section.tour
 
       h2
         color: $color-mercy-red
+
+      .related-button
+        color: $color-mercy-red
+        border-color: $color-mercy-red
   
   h2
     color: $color-charcoal
@@ -41,3 +47,6 @@ section.tour
   .related-button
     +button
     margin-top: 1rem
+    color: $color-charcoal
+    border-color: $color-charcoal
+
