@@ -10,6 +10,6 @@ layers:
 related:
   'Learn More': 'learn-more'
 ---
-<iframe src="https://player.vimeo.com/video/137703085?byline=0&portrait=0" width="100%" height="auto" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/137703085?byline=0&portrait=0" width="100%" height="220" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 INVEST-in-Kandahar is a 36-month long skills development program designed to facilitate the reintegration of Afghan youth, women and internally displaced people (IDP) into communities by expanding their opportunities through enhanced vocational and life skills.
