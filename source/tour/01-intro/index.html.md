@@ -1,5 +1,5 @@
 ---
-title: Intro
+title: What is INVEST-in-Kandahar?
 step: 1
 lat: 33.6786
 lng: -294.5984
