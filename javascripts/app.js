@@ -942,19 +942,20 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
 
 }).call(this);
 (function() {
-  var Sequencer, Step, base, base1;
+  var MapLayer, Sequencer, Step, base, base1, base2;
 
   (base = window.MC.Classes).Sequencer || (base.Sequencer = Sequencer = (function() {
-    function Sequencer(map) {
+    function Sequencer(map, key1) {
       var step;
       this.map = map;
+      this.key = key1;
       this.layers = [];
       this.steps = (function() {
-        var i, len, ref, results;
+        var j, len, ref, results;
         ref = $('main article.step');
         results = [];
-        for (i = 0, len = ref.length; i < len; i++) {
-          step = ref[i];
+        for (j = 0, len = ref.length; j < len; j++) {
+          step = ref[j];
           results.push(new MC.Classes.Step($(step), this));
         }
         return results;
@@ -967,15 +968,19 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
     }
 
     Sequencer.prototype.setup = function(vis, layers) {
-      var i, layer, len, results;
-      results = [];
-      for (i = 0, len = layers.length; i < len; i++) {
+      var i, j, k, layer, ref, ref1, sublayer;
+      for (i = j = 1, ref = layers.length - 1; 1 <= ref ? j <= ref : j >= ref; i = 1 <= ref ? ++j : --j) {
         layer = layers[i];
-        this.layers.push(layer);
-        this.listen();
-        results.push(this.poll());
+        if ((layer.type != null) && layer.type === 'layergroup') {
+          for (sublayer = k = 0, ref1 = layer.getSubLayerCount() - 1; 0 <= ref1 ? k <= ref1 : k >= ref1; sublayer = 0 <= ref1 ? ++k : --k) {
+            this.layers.push(new MC.Classes.MapLayer(layer.getSubLayer(sublayer)));
+          }
+        } else {
+          this.layers.push(new MC.Classes.MapLayer(layer));
+        }
       }
-      return results;
+      this.listen();
+      return this.poll();
     };
 
     Sequencer.prototype.listen = function() {
@@ -1000,14 +1005,15 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
         ref.exit();
       }
       this.current = step;
-      return this.current.enter();
+      this.current.enter();
+      return this.show(this.current.data.layers);
     };
 
     Sequencer.prototype.get_visible = function() {
-      var i, len, ref, step;
+      var j, len, ref, step;
       ref = this.steps;
-      for (i = 0, len = ref.length; i < len; i++) {
-        step = ref[i];
+      for (j = 0, len = ref.length; j < len; j++) {
+        step = ref[j];
         if (step.el.offset().top / $(document.body).height() > this.get_offset()) {
           return step;
         }
@@ -1027,26 +1033,71 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
       return this.map.map.setZoom(level);
     };
 
+    Sequencer.prototype.find_layer = function(key) {
+      return this.layers[this.key[key]];
+    };
+
+    Sequencer.prototype.show = function(ids) {
+      var id, j, k, layer, len, len1, ref, results;
+      console.log('showing', ids);
+      ref = this.layers;
+      for (j = 0, len = ref.length; j < len; j++) {
+        layer = ref[j];
+        layer.hide();
+      }
+      results = [];
+      for (k = 0, len1 = ids.length; k < len1; k++) {
+        id = ids[k];
+        results.push(this.find_layer(id).show());
+      }
+      return results;
+    };
+
     return Sequencer;
 
   })());
 
-  (base1 = window.MC.Classes).Step || (base1.Step = Step = (function() {
+  (base1 = window.MC.Classes).MapLayer || (base1.MapLayer = MapLayer = (function() {
+    function MapLayer(layer1) {
+      this.layer = layer1;
+      this.type = this.layer.type != null ? this.layer.type : 'unknown';
+    }
+
+    MapLayer.prototype.hide = function() {
+      if (this.type === 'torque') {
+        return this.layer.stop();
+      } else {
+        return this.layer.hide();
+      }
+    };
+
+    MapLayer.prototype.show = function() {
+      if (this.type === 'torque') {
+        return this.layer.play();
+      } else {
+        return this.layer.show();
+      }
+    };
+
+    return MapLayer;
+
+  })());
+
+  (base2 = window.MC.Classes).Step || (base2.Step = Step = (function() {
     function Step(el, sequencer) {
       this.el = el;
       this.sequencer = sequencer;
       this.data = this.el.data();
+      this.data.layers = this.data.layers.split(',');
     }
 
     Step.prototype.enter = function() {
       this.el.addClass('current');
-      this.center();
-      return console.log(this);
+      return this.center();
     };
 
     Step.prototype.exit = function() {
-      this.el.removeClass('current');
-      return console.log(this);
+      return this.el.removeClass('current');
     };
 
     Step.prototype.center = function() {
@@ -1065,7 +1116,12 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
 (function() {
   MC.Storage.map = cartodb.createVis(MC.Storage.regions.map, MC.Storage.regions.map.data('map-url'));
 
-  MC.Storage.sequencer = new MC.Classes.Sequencer(MC.Storage.map);
+  MC.Storage.sequencer = new MC.Classes.Sequencer(MC.Storage.map, {
+    'af_adminborders': 0,
+    'invest_knd_dataset_1': 1,
+    'invest_partnership': 2,
+    'all_20_20oasis202007_2014': 3
+  });
 
 }).call(this);
 (function() {

@@ -18,7 +18,7 @@ article,
 /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
 .push-1 {
   margin-left: 8.33333%; }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 800px) {
     /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
     .push-1 {
       margin-left: 0; } }
@@ -30,7 +30,7 @@ article,
 /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
 .push-2 {
   margin-left: 16.66667%; }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 800px) {
     /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
     .push-2 {
       margin-left: 0; } }
@@ -42,7 +42,7 @@ article,
 /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
 .push-3 {
   margin-left: 25%; }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 800px) {
     /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
     .push-3 {
       margin-left: 0; } }
@@ -54,7 +54,7 @@ article,
 /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
 .push-4 {
   margin-left: 33.33333%; }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 800px) {
     /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
     .push-4 {
       margin-left: 0; } }
@@ -66,7 +66,7 @@ article,
 /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
 .push-5 {
   margin-left: 41.66667%; }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 800px) {
     /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
     .push-5 {
       margin-left: 0; } }
@@ -78,7 +78,7 @@ article,
 /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
 .push-6 {
   margin-left: 50%; }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 800px) {
     /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
     .push-6 {
       margin-left: 0; } }
@@ -90,7 +90,7 @@ article,
 /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
 .push-7 {
   margin-left: 58.33333%; }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 800px) {
     /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
     .push-7 {
       margin-left: 0; } }
@@ -102,7 +102,7 @@ article,
 /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
 .push-8 {
   margin-left: 66.66667%; }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 800px) {
     /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
     .push-8 {
       margin-left: 0; } }
@@ -114,7 +114,7 @@ article,
 /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
 .push-9 {
   margin-left: 75%; }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 800px) {
     /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
     .push-9 {
       margin-left: 0; } }
@@ -126,7 +126,7 @@ article,
 /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
 .push-10 {
   margin-left: 83.33333%; }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 800px) {
     /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
     .push-10 {
       margin-left: 0; } }
@@ -138,7 +138,7 @@ article,
 /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
 .push-11 {
   margin-left: 91.66667%; }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 800px) {
     /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
     .push-11 {
       margin-left: 0; } }
@@ -150,7 +150,7 @@ article,
 /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
 .push-12 {
   margin-left: 100%; }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 800px) {
     /* line 18, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
     .push-12 {
       margin-left: 0; } }
@@ -168,9 +168,9 @@ article,
   @media screen and (max-width: 1024px) {
     /* line 24, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
     .column {
-      padding-left: 1rem;
-      padding-right: 1rem; } }
-  @media screen and (max-width: 640px) {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem; } }
+  @media screen and (max-width: 800px) {
     /* line 24, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
     .column {
       clear: both;
@@ -183,7 +183,7 @@ article,
 .column .column {
   padding: 0; }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 800px) {
   /* line 49, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
   .auto-space .column + .column {
     margin-top: 2rem; } }
@@ -241,7 +241,7 @@ article,
   /* line 95, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
   .tablet-show {
     display: inline-block; } }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 800px) {
   /* line 99, /Users/august/Sites/InvestMap/source/stylesheets/_grid.sass */
   .mobile-full {
     width: 100%; }
@@ -365,18 +365,37 @@ header {
   width: 100%;
   background: #b20838;
   z-index: 100; }
+  @media screen and (max-width: 1024px) {
+    /* line 1, /Users/august/Sites/InvestMap/source/stylesheets/sections/_header.sass */
+    header {
+      padding: 1rem; } }
+  /* line 15, /Users/august/Sites/InvestMap/source/stylesheets/sections/_header.sass */
+  header article.navigation img.logo {
+    max-width: 120px; }
 
 /* line 1, /Users/august/Sites/InvestMap/source/stylesheets/sections/_main.sass */
 main {
   position: relative;
-  box-shadow: 0 3px 5px rgba(50, 50, 50, 0.25);
   background-color: white;
   width: 33.33333%;
   z-index: 50;
-  max-height: 100%; }
-  /* line 10, /Users/august/Sites/InvestMap/source/stylesheets/sections/_main.sass */
+  max-height: 100%;
+  box-shadow: 0 3px 5px rgba(50, 50, 50, 0.25); }
+  @media screen and (max-width: 1024px) {
+    /* line 1, /Users/august/Sites/InvestMap/source/stylesheets/sections/_main.sass */
+    main {
+      width: 50%; } }
+  @media screen and (max-width: 800px) {
+    /* line 1, /Users/august/Sites/InvestMap/source/stylesheets/sections/_main.sass */
+    main {
+      width: auto; } }
+  /* line 16, /Users/august/Sites/InvestMap/source/stylesheets/sections/_main.sass */
   main section article {
     padding: 2rem 1.5rem; }
+    @media screen and (max-width: 1024px) {
+      /* line 16, /Users/august/Sites/InvestMap/source/stylesheets/sections/_main.sass */
+      main section article {
+        padding: 1.5rem 1rem; } }
 
 /* line 1, /Users/august/Sites/InvestMap/source/stylesheets/sections/_drawer.sass */
 aside.drawer {
@@ -522,8 +541,13 @@ section.tour {
 
 /* line 1, /Users/august/Sites/InvestMap/source/stylesheets/sections/_map.sass */
 aside.map {
-  z-index: 0; }
-  /* line 3, /Users/august/Sites/InvestMap/source/stylesheets/sections/_map.sass */
+  z-index: 0;
+  position: relative; }
+  @media screen and (max-width: 800px) {
+    /* line 1, /Users/august/Sites/InvestMap/source/stylesheets/sections/_map.sass */
+    aside.map {
+      padding-bottom: 50%; } }
+  /* line 8, /Users/august/Sites/InvestMap/source/stylesheets/sections/_map.sass */
   aside.map .canvas {
     position: fixed;
     top: 0;
@@ -531,3 +555,8 @@ aside.map {
     bottom: 0;
     left: 0;
     left: 33.33333%; }
+    @media screen and (max-width: 800px) {
+      /* line 8, /Users/august/Sites/InvestMap/source/stylesheets/sections/_map.sass */
+      aside.map .canvas {
+        position: absolute;
+        left: 0; } }
