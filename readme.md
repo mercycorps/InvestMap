@@ -1,6 +1,6 @@
 # INVEST Tour
 
-> A self-guided, map-based tour prototype based on [CartoDB](https://cartodb.com/) and [Middleman](http://middlemanapp.com/).
+> A self-guided, map-based tour prototype based on [CartoDB](https://cartodb.com/) and [Middleman](http://middlemanapp.com/). *This project is the first of many in an effort to increase the fidelity and comprehension of Mercy Corps project data.*
 
 Mercy Corps has commissioned an interactive storytelling tool to more quickly deliver insights and progress reports for benefactors of internal programs. Expository content and data are brought together in a polished, browser-based single-page user experience, with supplemental pages for information about the program.
 
@@ -34,10 +34,10 @@ If you need a package for distribution outside GitHub Pages, a quick `$ middlema
 
 ## Publishing
 
-To publish changes to the `gh-pages` branch, navigate to your repository and run:
+Builds and deployments are handled by the `[middleman-deploy](https://github.com/middleman-contrib/middleman-deploy)` Gem. To publish changes to the `gh-pages` branch, navigate to your repository and run:
 
 ```
+$ middleman build
 $ middleman deploy
 ```
-
-Please only deploy from `master`. Verify your changes at the project's [public-facing endpoint](http://mercycorps.github.io/InvestMap/).
+A shortcut for this is the one-line `$ middleman deploy --build-before`. Additionally, you may add automatic building to the config hash in `config.rb`. Please only deploy from the `master` branch. Verify your changes at the project's [public-facing endpoint](http://mercycorps.github.io/InvestMap/).
