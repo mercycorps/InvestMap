@@ -1093,7 +1093,8 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
 
     Step.prototype.enter = function() {
       this.el.addClass('current');
-      return this.center();
+      this.center();
+      return this.zoom();
     };
 
     Step.prototype.exit = function() {
