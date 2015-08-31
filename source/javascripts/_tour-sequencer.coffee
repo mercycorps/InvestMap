@@ -73,18 +73,26 @@ window.MC.Classes.MapLayer ||= class MapLayer
     # @data = @layer.getAttributes()
 
   hide: ->
+    @layer.hide()
+
+    ###
     if @type == 'torque'
       @layer.stop()
       @layer.hide()
     else
       @layer.hide()
+    ###
 
   show: ->
+    @layer.show()
+
+    ###
     if @type == 'torque'
-      @layer.play()
       @layer.show()
+      @layer.play()
     else
       @layer.show()
+    ###
 
 # Individual Steps
 
