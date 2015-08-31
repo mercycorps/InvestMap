@@ -12,6 +12,6 @@ layers:
 related:
   'Explore M&E Afghanistan': 'm-e-afghanistan'
 ---
-<iframe src="https://player.vimeo.com/video/137783986?byline=0&portrait=0" width="400" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/137783986">Monitoring and Evaluation Short</a> from <a href="https://vimeo.com/user38267032">Gordon Klco</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<iframe src="https://player.vimeo.com/video/137783986?byline=0&portrait=0" width="100%" height="220" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 Mercy Corps has partnered with nearly 400 local business with the goal of employing INVEST participants in the fields they study. These partnerships are an integral part of INVEST’s success. By connecting participants with local, skilled businesses, participants continue to gain skills while developing community.
