@@ -11,4 +11,4 @@ related:
   'More on Partnerships': 'partnerships'
 ---
 
-INVEST participants are paired with Businesses involved in high demand markets including Education, Sewing/Tailoring, Metal work and Healthcare.
+INVEST participants are paired with businesses involved in high demand markets including Education, Sewing/Tailoring, Metal work and Healthcare.
