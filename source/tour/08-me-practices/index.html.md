@@ -14,4 +14,5 @@ related:
 ---
 <iframe src="https://player.vimeo.com/video/137783986?byline=0&portrait=0" width="100%" height="220" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-Mercy Corps has partnered with nearly 400 local business with the goal of employing INVEST participants in the fields they study. These partnerships are an integral part of INVEST’s success. By connecting participants with local, skilled businesses, participants continue to gain skills while developing community.
+Monitoring and Evaluation practices are fundamental to the success of a program.  The Afghanistan M&E team has implemented a new digitized workflow that allows them to quickly collect, analyze, securely store and report on programs in real time.  
+
