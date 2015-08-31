@@ -49,7 +49,8 @@ window.MC.Classes.Sequencer ||= class Sequencer
     @native.panTo [lat, lng]
 
   zoom: (level) ->
-    @map.map.setZoom level
+    @native.setZoom level
+    # @native.setZoomAround [@current.data.lat, @current.data.lng], level
 
   find_layer: (key) ->
     @layers[@key[key]]
