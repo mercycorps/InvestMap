@@ -9,6 +9,8 @@ window.MC.Classes.Sequencer ||= class Sequencer
     @map.done (vis, layers) => @setup vis, layers
 
   setup: (vis, layers) ->
+    @native = @map.getNativeMap()
+
     for i in [1..(layers.length - 1)]
       layer = layers[i]
       # Skip the first layer, because that's the actual map!
@@ -44,7 +46,7 @@ window.MC.Classes.Sequencer ||= class Sequencer
     $(window).scrollTop() / ( $(document.body).height() + 250 - $(window).height() )
 
   pan: (lat, lng) ->
-    @map.map.setCenter [lat, lng]
+    @native.panTo [lat, lng]
 
   zoom: (level) ->
     @map.map.setZoom level
