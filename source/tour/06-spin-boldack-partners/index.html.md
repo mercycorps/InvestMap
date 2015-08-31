@@ -1,6 +1,6 @@
 ---
 title: Business/Partner Location Spin Boldack
-step: 6
+step: 7
 lat: 31.0064 
 lng: -293.6054
 zoom: 14
