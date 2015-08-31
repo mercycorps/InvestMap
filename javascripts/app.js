@@ -969,6 +969,7 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
 
     Sequencer.prototype.setup = function(vis, layers) {
       var i, j, k, layer, ref, ref1, sublayer;
+      this["native"] = this.map.getNativeMap();
       for (i = j = 1, ref = layers.length - 1; 1 <= ref ? j <= ref : j >= ref; i = 1 <= ref ? ++j : --j) {
         layer = layers[i];
         if ((layer.type != null) && layer.type === 'layergroup') {
@@ -1026,11 +1027,11 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
     };
 
     Sequencer.prototype.pan = function(lat, lng) {
-      return this.map.map.setCenter([lat, lng]);
+      return this["native"].panTo([lat, lng]);
     };
 
     Sequencer.prototype.zoom = function(level) {
-      return this.map.map.setZoom(level);
+      return this["native"].setZoom(level);
     };
 
     Sequencer.prototype.find_layer = function(key) {
@@ -1064,21 +1065,27 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
     }
 
     MapLayer.prototype.hide = function() {
-      if (this.type === 'torque') {
-        this.layer.stop();
-        return this.layer.hide();
-      } else {
-        return this.layer.hide();
-      }
+      return this.layer.hide();
+
+      /*
+      if @type == 'torque'
+        @layer.stop()
+        @layer.hide()
+      else
+        @layer.hide()
+       */
     };
 
     MapLayer.prototype.show = function() {
-      if (this.type === 'torque') {
-        this.layer.play();
-        return this.layer.show();
-      } else {
-        return this.layer.show();
-      }
+      return this.layer.show();
+
+      /*
+      if @type == 'torque'
+        @layer.show()
+        @layer.play()
+      else
+        @layer.show()
+       */
     };
 
     return MapLayer;
