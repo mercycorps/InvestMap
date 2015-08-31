@@ -3,7 +3,7 @@ title: Business/Partner Location Kandahar City
 step: 6
 lat: 31.6144 
 lng: -294.2882
-zoom: 13
+zoom: 12
 layers:
   - "af_adminborders"
   - "invest_partnership"
