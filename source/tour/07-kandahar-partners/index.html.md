@@ -1,6 +1,6 @@
 ---
 title: Business/Partner Location Kandahar City
-step: 7
+step: 6
 lat: 31.6102
 lng: -294.2967
 zoom: 12
