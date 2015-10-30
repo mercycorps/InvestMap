@@ -22,16 +22,10 @@ latest M&E tools.
 
 Our Kabul-based MEL team provides support to all program and support teams through 6 expert working groups:
 
-## The Academy
-
-The Academy is the conduit through which a range of internal and external educational, skills and capacity building services are delivered across the country program. The Academy was conceived in response to a need for consistent, high quality program management, and a growing need to be able to assess impact rather than simply monitor activities. The Academy team helps program teams develop specialized training modules, which may be required for program implementation and oversees the training of trainers (ToT) that facilitate greater reach. To measure the impact of our training, the Academy harnesses its evaluation component to systematically assess what works and what doesn’t by obtaining feedback through a series of decision gates—allowing trainers to learn and adjust their approach.
-
-**Contact**: *Training Manager*, Mustafa Sultani at <msultani@af.mercycorps.org>
-
 ## Analysis And Reporting
 The role of the Analysis and Reporting team is to provide analytical and graphic support to program teams on reporting accurate findings and documenting lessons learned. Working closely with the Survey Design group, this team develops analysis plans that allow us to test theories of change and learn from our results.
 
-**Contact**: *M&E Manager*, Hikmatullah Fayez at <hfayez@af.mercycorps.org>
+**Contact**: *M&E Manager*, Abdul Wajid at <awajid@af.mercycorps.org>
 
 ## GIS Lab
 
@@ -43,22 +37,26 @@ The GIS lab is dedicated to supporting the collection and visualization of geosp
 
 The PM@MC team is responsible for program information and quality assurance for all programs across the country portfolio.  The team is split into two parts: 1) Project Cycle Management, who oversees the development and review of the standard 11 Forms and backup documents; 2) PM@MC requirements and the Project Database, who ensures all programs are in compliance with our agency-wide program management initiative, PM@MC and administers updates to the Project Database, a output-level indicator tracker. These functions will allow program teams to receive accurate and updated information regarding their program performance in near real-time through a summary dashboard.
 
-**Contact**: *M&E and GIS Manager*, Mohammad Osman Hassani at <mhassani@af.mercycorps.org> for Project Cycle Management or *M&E Officer*, Bilal Alkozai at <balkozai@af.mercycorps.org> for PM@MC requirements and the Project Database.
+**Contact**: *M&E Manager*, Ahmad Shah Momin at <amomin@af.mercycorps.org> 
 
 ## Program Performance
 
 The team supports program teams in the development of the logical framework, indicator plan, and M&E matrix and conducts a review of all Project Agreements before project activities are implemented. These key tools help to conceptualize program objectives and measure achievements toward our targets. Since these tools can change throughout the program lifecycle, our team will support program teams in revising and updating their tools to ensure that what we are measuring is aligned with current program objectives.
 
-**Contact**: *Senior Information Officer*, Mashal Sadat at <msadat@af.mercycorps.org>
+**Contact**: *Monitoring, Evaluation & GIS Manager*, Mohammad Osman Hassani at <mhassani@af.mercycorps.org>
 
 ## Program Technology
 
 Whether there is a new tool or software that needs to be tested or a gap is identified in our programmatic efforts, our Program Technology team works to find a solution. Housed within the MEL unit, the Program Technology team supports the testing, review of and training in new tools that can be replicated and scaled across our programs or support departments. Learning through an iterative process has allowed this team to develop tools knowing that they could be easily discarded for a new tool. Through this process of creative destruction, we learn how to continually adjust, innovate and solve problems. Some recent initiatives taken by the team include the complete rollout of mobile data collection tools across all our programs and the setup and staff training in Wrike, a new cloud-based project management tool that all program teams and departments use to improve task management and coordination.
 
-**Contact**: *M&E Officer*, Abdul Wajid at <awajid@af.mercycorps.org>
+**Contact**: *ICT Specialist*, Fayaz Khan Sahil at <fasahil@af.mercycorps.org>
 
 ## Survey Design
 
 The Survey Design team ensures program evaluations adhere to the best practices in survey design, both quantitative and qualitative tools and sampling methods that are instrumental to achieving robust results. The team will utilize our flexible mobile data collection tools giving us real-time access to data so we can monitor and verify the progress of survey campaigns and provide our Analysis and Reporting team with a live dataset where they can perform preliminary analyses even before collection is completed.
 
-**Contact**: *M&E Manager*, Ahmad Shah Momin at <amomin@af.mercycorps.org>
+**Contact*: *M&E Manager*, Hikmatullah Fayez at <hfayez@af.mercycorps.org>
+
+## Program and Data Management System (TOLA) – The goal of Tola is to support adaptive program management and enable experience based learning by providing tools that can improve the quality of program M&E data. Tola is a complete data management system which utilizes the power of cloud-based technologies to improve program monitoring efforts without losing the ability to work offline in remote areas. Once data has been collected, Tola blends data collection tools with workflow tools and a centralized collection database to allow for cumulative and summary reporting. By using existing open source solutions and standards the Tola team can develop custom implementations, that can integrate with third party software without incurring high maintenance costs.
+
+**Contact**: *Senior Information and Relationshop Manager*, Mashal Sadat at <msadat@af.mercycorps.org>
