@@ -57,7 +57,7 @@ The Survey Design team ensures program evaluations adhere to the best practices 
 
 **Contact*: *M&E Manager*, Hikmatullah Fayez at <hfayez@af.mercycorps.org>
 
-## Program and Data Management System (TOLA)
+## Program and Data Management System (Tola)
 
 The goal of Tola is to support adaptive program management and enable experience based learning by providing tools that can improve the quality of program M&E data. Tola is a complete data management system which utilizes the power of cloud-based technologies to improve program monitoring efforts without losing the ability to work offline in remote areas. Once data has been collected, Tola blends data collection tools with workflow tools and a centralized collection database to allow for cumulative and summary reporting. By using existing open source solutions and standards the Tola team can develop custom implementations, that can integrate with third party software without incurring high maintenance costs.
 
